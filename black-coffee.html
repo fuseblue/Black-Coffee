@@ -41,7 +41,7 @@
         <meta name="if:Archive Link" content="0"/>    
         <meta name="if:RSS Link" content="0"/> 
         <meta name="if:Social Links Icons" content="1"/> 
-        
+        <meta name="if:Show Photo Overlay" content="1"/>
         <meta name="if:Show Post Tags" content="0"/>
         <meta name="if:Show Post Caption" content="1"/>
         <meta name="if:Show Post Meta" content="1"/>
@@ -757,6 +757,17 @@
                     display:none;
                 }
             {/block:IfNotShowPostCaption}
+            
+            {block:IfNotShowPhotoOverlay}
+                .overlay, .overlay-bg {
+                    display:none;
+                }
+            {/block:IfNotShowPhotoOverlay}
+            
+
+            .post-photo .content, .post-photo .post-meta, .post-photoset .content, .post-photoset .post-meta {
+                display:none;
+            }
     </style>
 
 </head>
